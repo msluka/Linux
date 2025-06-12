@@ -8,24 +8,33 @@
 | `ls -l` | Detailed list (size, owner, dates, permissions) ||
 | `ls -ld` | Show info about the directory, not its contents ||
 | `cd folder1/folder2` | Change to directory |`cd Projects/laravel-app`|
-| `cd ..` | Go up one level |
-| `cd ../..` | Go up two levels |
-| `pwd` | Print current path |
-| `mkdir name` | Create directory |
-| `rmdir name` | Remove empty directory |
-| `rm file` | Remove file |
-| `rm -r folder` | Remove folder and contents |
-| `touch file.txt` | Create new empty file |
-| `cp source target` | Copy file/folder |
-| `mv source target` | Move or rename file/folder |
-| `find /path -name "file"` | Find file by name |
-| `locate name` | Fast search (pre-indexed) |
+| `cd ..` | Go up one level ||
+| `cd ../..` | Go up two levels ||
+| `pwd` | Print current path ||
+| `mkdir name` | Create directory ||
+| `rmdir name` | Remove empty directory ||
+| `rm file` | Remove file ||
+| `rm -r folder` | Remove folder and contents ||
+| `touch file.txt` | Create new empty file ||
+| `cp source target` | Copy file in the same directory |`cp index.php index_backup.php`|
+|  | Copies index.php into the /var/www/html/ directory |`cp index.php /var/www/html/`|
+|  | Copies the entire contents of my_folder/ into backup_folder/ |`cp -r my_folder/ backup_folder/`|
+| `mv source target` | Move or rename file/folder ||
+| `find /path -name "file"` | Find file by name ||
+| `find / -name "file"` | Searches the whole system for index.php. |`find / -name "index.php"`|
+| `find / -name "*file*"` | for files or directories with "php" in the name |`find / -name "*php*"`|
+| `locate name` | Fast search (pre-indexed) |`locate index.php`|
+
+
+
+
+
 
 ## 📄 Viewing & Editing Files
 
-| Command | Description |oiu|
-|--------|-------------|--|
-| `cat file.txt` | Show file content ||
+| Command | Description |
+|--------|-------------|
+| `cat file.txt` | Show file content |
 | `less file.txt` | View with scroll |
 | `head -n 10 file.txt` | Show first 10 lines |
 | `tail -n 10 file.txt` | Show last 10 lines |
